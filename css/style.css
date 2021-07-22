@@ -1,0 +1,178 @@
+/*-----------------------------------------------------------------------------------
+	Theme Name: photography
+	Description: photography
+	Author: Francisco Tembe
+	Author email: franciscojtembe@gmail.com
+-----------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+*{
+	margin:0;
+	padding:0;
+	font-family: 'Poppins', sans-serif;
+	box-sizing: border-box;
+	/*overflow: hidden;*/
+}
+html {
+	scroll-behavior: smooth;
+	}
+:target {
+	scroll-margin-top: .8em;
+}
+
+body{
+	width: 100%;
+	height: 100vh;
+}
+.wrapper{
+	position: relative;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	/*justify-content: space-between;*/
+
+}
+.profile{
+	position: relative;
+	width: 40%;
+	height: 100%;
+
+}
+.bio{
+position: absolute;
+z-index: 80;
+bottom:30%;
+left: 1rem;
+padding: 50px;
+}
+.bio h3{
+font-size: 3.2rem;
+font-weight: 600;
+color: #222;
+margin-bottom: 1rem;
+padding: 0;
+}
+
+.bio h3 small{
+	display: block;
+	margin: 0;
+	font-size: 1rem;
+	padding: 0;
+}
+.bio p{
+	/*letter-spacing: 0.1rem;
+	line-height: 1.6rem;
+	font-weight: 400;*/
+	color: #222;
+	margin-bottom: 2rem;
+}
+.picture{
+	width: 100%;
+	padding: 0;
+	margin: 0;
+	height: 100%;
+	background-color: #0000;
+}
+.picture img{
+	width: 100%;
+	height: 100%;
+	opacity: 0.6;
+	object-fit: cover;
+}
+
+.logo{
+	width: 64px;
+	position: absolute;
+	z-index: 80;
+	top:0.3rem;
+	left: 0.3rem;
+}
+
+.logo img{
+	width: 100%;
+}
+
+.bio a{
+	border: 2px solid #111;
+	padding: 0.3rem 3rem;
+	text-decoration: none;
+	text-transform: uppercase;
+	color: #111;
+	font-weight: 600;
+	transition: all 1s ;
+}
+.bio a:hover{
+	background-color: #111;
+	color: #fff;
+}
+.works{
+	position: relative;
+	width: 60%;
+}
+
+.content-wrap{
+	position: absolute;
+	padding:0.3rem 1rem;
+	top: 0;
+	left: 0;
+	width: 100%;
+}
+
+.content-wrap .items{
+	overflow-y: auto;
+	width: 100%;
+	column-count: 3;
+}
+
+.item{
+	width: 100%;
+	margin-bottom: .5rem;
+	padding: 0.3rem;
+}
+
+.item img{
+	width: 100%;
+	border-radius: 2rem;
+	box-shadow:0px 0px 12px #ccc;
+}
+
+@media(max-width: 992px){
+	.wrapper{
+		flex-direction: column;
+	}
+	.profile,
+	.works{
+		width: 100%;
+	}
+	.content-wrap{
+		margin-top: 3rem;
+	}
+}
+
+@media (max-width: 576px) {
+
+.bio{
+	padding: 20px;
+}
+	.bio h3{
+
+font-size: 2.2rem;
+font-weight: 600;
+}
+
+.bio h3 small{
+	
+	font-size: .7rem;
+
+}
+.bio p{
+	font-size: .9rem;
+	color: #222;
+	margin-bottom: 2rem;
+}
+
+.content-wrap .items{
+	overflow-y: auto;
+	width: 100%;
+	column-count: 2;
+}
+ }
